@@ -235,7 +235,7 @@ function Appointment() {
           </div>
         </div>
 
-        <table className="min-w-full divide-y divide-gray-200 shadow-sm">
+        <table className="min-w-full divide-y divide-gray-200 shadow-sm mt-20 mb-28">
           <thead className="bg-gray-100">
             <tr>
               <th className="px-4 py-3 text-left text-lg font-medium text-gray-500 uppercase">
