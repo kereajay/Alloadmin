@@ -66,7 +66,7 @@ function Adddoctor() {
       // }
 
       await axios
-        .post("http://localhost:9000/api/v1/user/doctor/signup", formData, {
+        .post("https://allobackend.onrender.com/api/v1/user/doctor/signup", formData, {
           withCredentials: true,
           credentials: "include",
         })

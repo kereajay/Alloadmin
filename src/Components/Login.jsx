@@ -22,7 +22,7 @@ function Login() {
 
     // Handle form submission logic here (e.g., send data to backend)
     const res = await fetch(
-      "http://localhost:9000/api/v1/user/admin/login",
+      "https://allobackend.onrender.com/api/v1/user/admin/login",
       {
         withCredentials: true,
         credentials: "include",

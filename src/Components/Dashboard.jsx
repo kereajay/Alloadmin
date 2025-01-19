@@ -28,8 +28,10 @@ function Appointment() {
     const fetchAppointments = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:9000/api/v1/apoointment/getallappointmentforadmin",
-          { withCredentials: true }
+          "https://allobackend.onrender.com/api/v1/apoointment/getallappointmentforadmin",
+          { withCredentials: true,
+            credentials: "include",
+           }
         );
         setAppointments(res.data.appointments);
       } catch (error) {
@@ -42,7 +44,7 @@ function Appointment() {
     const fetchdoctors = async () => {
       try {
         const res = await fetch(
-          "http://localhost:9000/api/v1/user/getalldoctors",
+          "https://allobackend.onrender.com/api/v1/user/getalldoctors",
           {
             withCredentials: true,
             credentials: "include",
@@ -79,12 +81,13 @@ function Appointment() {
 
     try {
       const res = await axios.put(
-        `http://localhost:9000/api/v1/apoointment/updateadmin/${selectedAppointment._id}`,
+        `https://allobackend.onrender.com/api/v1/apoointment/updateadmin/${selectedAppointment._id}`,
         {
           appointment_date: newDate.toISOString(),
         },
         {
-          withCredentials: true, // Include credentials for authentication
+          withCredentials: true,
+          credentials: "include", 
         }
       );
 
@@ -114,9 +117,11 @@ function Appointment() {
     // console.log(typeof appointmentId)
     try {
       const { data } = await axios.put(
-        `http://localhost:9000/api/v1/apoointment/updateadmin/${appointmentId}`,
+        `https://allobackend.onrender.com/api/v1/apoointment/updateadmin/${appointmentId}`,
         { status },
-        { withCredentials: true }
+        { withCredentials: true,
+          credentials: "include",
+         }
       );
 
       setAppointments((prevAppointments) =>
@@ -137,9 +142,11 @@ function Appointment() {
   const handledeleteappointment = async (aid) => {
     try {
       const { data } = await axios.delete(
-        `http://localhost:9000/api/v1/apoointment/deleteadmin/${aid}`,
+        `https://allobackend.onrender.com/api/v1/apoointment/deleteadmin/${aid}`,
 
-        { withCredentials: true }
+        { withCredentials: true,
+          credentials: "include",
+         }
       );
 
       setAppointments((preapp) =>

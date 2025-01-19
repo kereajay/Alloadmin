@@ -14,7 +14,7 @@ function Sidebar() {
   const { isAuthenticated, setIsAuthenticated } = useContext(Admincontext);
   const handlelogout = async () => {
     const res = await fetch(
-      "http://localhost:9000/api/v1/user/adminlogout",
+      "https://allobackend.onrender.com/api/v1/user/adminlogout",
       {
         withCredntials: true,
         credentials: "include",

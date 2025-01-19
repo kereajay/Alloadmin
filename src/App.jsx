@@ -20,7 +20,7 @@ function App() {
     const fecthuser = async () => {
       try {
         const res = await fetch(
-          "http://localhost:9000/api/v1/user/admin/details",
+          "https://allobackend.onrender.com/api/v1/user/admin/details",
           {
             withCredntials: true,
             credentials: "include",

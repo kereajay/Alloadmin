@@ -9,7 +9,7 @@ function Alldoctors() {
     const fetchdoctors = async () => {
       try {
         const res = await fetch(
-          "http://localhost:9000/api/v1/user/getalldoctors",
+          "https://allobackend.onrender.com/api/v1/user/getalldoctors",
           {
             withCredntials: true,
             credentials: "include",
