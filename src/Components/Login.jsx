@@ -134,6 +134,14 @@ function Login() {
                 required
               />
             </div>
+            <small >
+              Use the below credentials demo to login into admin page 
+              
+              email:admin1@gmailcom
+              password:demo7demo7
+              <small>Because only admin can register another admin and doctor </small>
+
+            </small>
 
             <button
               type="submit"
